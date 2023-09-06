@@ -1,0 +1,17 @@
+{
+    "name": "UASAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0caab94c8c0a20b4e83e8dc1e4b2a416",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464647a24caf4bf791548d4b1d238830, type: 3}
+  m_Name: Ability3
+  m_EditorClassIdentifier: 
+  abilityName: 
+  targetBehavior: 1
+  icon: 
+  events:
+  - eventName: OnAbilityExecuted
+    effects:
+    - rid: 4516145205737947143
+  modifiers: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4516145205737947143
+      type: {class: CreateProjectileData, ns: Example, asm: Assembly-CSharp}
+      data:
+        name: CreateProjectile
+        target:
+          rid: 4516145205737947144
+        speed: 4
+        damage: 20
+    - rid: 4516145205737947144
+      type: {class: SingleTargetData, ns: UAS, asm: UASAssembly}
+      data:
+        targetType: 1

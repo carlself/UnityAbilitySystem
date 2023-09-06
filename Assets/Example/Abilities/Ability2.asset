@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464647a24caf4bf791548d4b1d238830, type: 3}
+  m_Name: Ability2
+  m_EditorClassIdentifier: 
+  abilityName: 
+  targetBehavior: 4
+  icon: 
+  events:
+  - eventName: OnAbilityExecuted
+    effects:
+    - rid: 4516145205737947138
+  modifiers:
+  - name: modifier_heal
+    passive: 0
+    icon: 
+    duration: 0
+    updateInterval: 1
+    events:
+    - eventName: OnUpdate
+      effects:
+      - rid: 4516145205737947140
+    stats:
+    - statName: MaxHealth
+      value: 100
+      op: 1
+    states:
+    - stateName: Stun
+  references:
+    version: 2
+    RefIds:
+    - rid: 4516145205737947138
+      type: {class: ApplyModifierData, ns: UAS, asm: UASAssembly}
+      data:
+        name: ApplyModifier
+        target:
+          rid: 4516145205737947139
+        duration: 3
+        modifierName: modifier_heal
+    - rid: 4516145205737947139
+      type: {class: SingleTargetData, ns: UAS, asm: UASAssembly}
+      data:
+        targetType: 0
+    - rid: 4516145205737947140
+      type: {class: HealData, ns: Example, asm: Assembly-CSharp}
+      data:
+        name: Heal
+        target:
+          rid: 4516145205737947141
+        amount: 10
+    - rid: 4516145205737947141
+      type: {class: SingleTargetData, ns: UAS, asm: UASAssembly}
+      data:
+        targetType: 0
